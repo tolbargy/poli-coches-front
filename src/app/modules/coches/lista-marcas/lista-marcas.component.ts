@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Marca } from '@shared/models/marca';
+import { MarcasService } from '@shared/services/marcas.service';
 
 @Component({
   selector: 'app-lista-marcas',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaMarcasComponent implements OnInit {
 
-  constructor() { }
+  public marcas: Marca[] = [];
+
+
+  constructor(private marcasService: MarcasService) { }
 
   ngOnInit(): void {
+    this.listarMarcas();
+  }
+
+  private listarMarcas() {
+    this.marcasService.listarMarcas().subscribe(res => {
+      this.marcas = res;
+    }, error => {
+      console.log(error);
+    });
   }
 
 }
