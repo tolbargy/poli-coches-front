@@ -9,9 +9,11 @@ import { environment } from 'src/environments/environment';
 })
 export class MarcasService {
 
+  private path: string = `${environment.api}/marcas`
+
   constructor(private http: HttpClient) { }
 
   public listarMarcas(): Observable<Marca[]> {
-    return this.http.get<Marca[]>(environment.api);
+    return this.http.get<Marca[]>(this.path);
   }
 }

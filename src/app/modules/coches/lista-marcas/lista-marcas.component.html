@@ -1,8 +1,12 @@
-<div class="ui card" *ngFor="let marca of marcas">
-    <div class="image">
-        <img [src]="marca.urlLogo">
-    </div>
-    <div class="content">
-        <a class="header">{{marca.nombre}}</a>
+<div class="ui grid">
+    <div class="five wide column" *ngFor="let marca of marcas">
+        <div class="ui card">
+            <div class="image">
+                <img [src]="marca.urlLogo + '?id='+marca.id">
+            </div>
+            <div class="content">
+                <a class="header">{{marca.nombre}}</a>
+            </div>
+        </div>
     </div>
 </div>
