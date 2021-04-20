@@ -5,4 +5,5 @@ export class Modelo {
     combustible: string;
     potenciaHp: number;
     marcaId: number;
+    urlLogo: string;
 }

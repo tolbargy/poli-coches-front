@@ -7,8 +7,8 @@
 <div class="row">
     <div class="col-sm-12 col-md-6 col-lg-4 mb-4" *ngFor="let marca of marcas">
         <div class="ui card" routerLink="{{marca.id}}/modelos" style="cursor: pointer;">
-            <div class="image">
-                <img [src]="marca.urlLogo + '?id='+marca.id">
+            <div class="">
+                <img [src]="marca.urlLogo + '?id='+marca.id" style="width: 100%!important; height: 300px!important;">
             </div>
             <div class="content">
                 <span class="header">{{marca.nombre}}</span>

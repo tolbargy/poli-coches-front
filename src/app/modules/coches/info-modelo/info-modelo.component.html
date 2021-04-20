@@ -1,1 +1,40 @@
-<p>info-modelo works!</p>
+<div class="row mb-5">
+    <div class="col-4">
+        <h2 class="ui header">
+            <i class="info circle icon" style="color: rgb(91, 91, 218);"></i>
+            <div class="content">
+                Informacion modelo
+            </div>
+        </h2>
+        <h2 class="ui header">
+            NOMBRE
+            <div class="sub header">{{modelo.nombre}}</div>
+        </h2>
+        <h2 class="ui header">
+            VERSION
+            <div class="sub header">{{modelo.version}}</div>
+        </h2>
+        <h2 class="ui header">
+            COMBUSTIBLE
+            <div class="sub header">{{modelo.combustible}}</div>
+        </h2>
+        <h2 class="ui header">
+            POTENCIA HP
+            <div class="sub header">{{modelo.potenciaHp}}</div>
+        </h2>
+        <h2 class="ui header">
+            MARCA
+            <div class="sub header">{{modelo.marcaId}}</div>
+        </h2>
+    </div>
+    <div class="col-8">
+        <div class="ui card" style="width: 400px; float: right;">
+            <div class="image">
+                <img [src]="modelo.urlLogo + '?id='+modelo.id">
+            </div>
+            <div class="content">
+                <span class="header">{{modelo.nombre}}</span>
+            </div>
+        </div>
+    </div>
+</div>
