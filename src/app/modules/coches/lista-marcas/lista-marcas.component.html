@@ -1,11 +1,17 @@
+<h2 class="ui header">
+    <i class="th list icon"></i>
+    <div class="content">
+        Marcas de coches
+    </div>
+</h2>
 <div class="row">
     <div class="col-sm-12 col-md-6 col-lg-4 mb-4" *ngFor="let marca of marcas">
-        <div class="ui card">
+        <div class="ui card" routerLink="{{marca.id}}/modelos" style="cursor: pointer;">
             <div class="image">
                 <img [src]="marca.urlLogo + '?id='+marca.id">
             </div>
             <div class="content">
-                <a class="header">{{marca.nombre}}</a>
+                <span class="header">{{marca.nombre}}</span>
             </div>
         </div>
     </div>

@@ -19,7 +19,8 @@ for (var i = 1; i <= 16; i++) {
       version: faker.address.zipCode(),
       combustible: faker.vehicle.type(),
       potenciaHp: faker.datatype.number(),
-      marcaId: i
+      marcaId: i,
+      urlLogo: faker.image.transport()
     });
   }
 }

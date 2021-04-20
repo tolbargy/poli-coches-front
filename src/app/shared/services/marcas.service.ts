@@ -16,4 +16,11 @@ export class MarcasService {
   public listarMarcas(): Observable<Marca[]> {
     return this.http.get<Marca[]>(this.path);
   }
+
+  public obtenerMarca(id: number): Observable<Marca> {
+    return this.http.get<Marca>(`${this.path}/${id}`);
+  }
+
+
+
 }

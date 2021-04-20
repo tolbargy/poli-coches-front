@@ -1,0 +1,41 @@
+<div class="row mb-5">
+    <div class="col-4">
+        <h2 class="ui header">
+            <i class="th list icon"></i>
+            <div class="content">
+                Modelos de coches
+                <div class="sub header">MARCA: {{marca.nombre}}</div>
+            </div>
+        </h2>
+    </div>
+    <div class="col-8">
+        <div class="ui card" style="width: 200px; float: right;">
+            <div class="image">
+                <img [src]="marca.urlLogo + '?id='+marca.id">
+            </div>
+            <div class="content">
+                <span class="header">{{marca.nombre}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4 mb-4" *ngFor="let modelo of modelos">
+        <div class="ui card" [routerLink]="modelo.id" style="cursor: pointer;">
+            <div class="image">
+                <img [src]="modelo.urlLogo + '?id='+modelo.id">
+            </div>
+            <div class="content">
+                <span class="header">{{modelo.nombre}}</span>
+                <div class="meta">
+                    <span>Version: {{modelo.version}}</span>
+                </div>
+                <div class="description">
+                    <strong>Combustible:</strong> {{modelo.combustible}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
